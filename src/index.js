@@ -9,9 +9,10 @@ const chatbot = new Telegram.Telegram('626714518:AAFVXrEKwjgg1A9T_Vw-1JU_bMa1D9A
 class EventsController extends TelegramBaseController{
 	
 	olaAction(scope) {
-    let msg = `bababba -- cacara`
-
-	scope.sendMessage(msg)
+	    const param = scope._message._text.substring(5)
+	    let msg = `bababba -- carara ${param}`
+	    console.log(msg)
+	    scope.sendMessage(msg)
 	}
 
 	get routes() {
